@@ -136,24 +136,38 @@
     İyi ki varsın, seni çok seviyorum! 💕
   </div>
 
-  <script>
+ <button id="evet" onclick="tesekkur()">Evet</button>
+<button id="hayır" onclick="kac()">Hayır</button>
+
+<script>
+  function tesekkur() {
+    // Evet tıklaması event'i gönder
+    gtag('event', 'buton_tiklama', {
+      'event_category': 'SevgiCevap',
+      'event_label': 'Evet',
+      'value': 1
+    });
+
+    document.getElementById("soruAlani").style.display = "none";
+    document.getElementById("tesekkurAlani").style.display = "block";
+  }
+
+  function kac() {
+    // Hayır tıklaması event'i gönder
+    gtag('event', 'buton_tiklama', {
+      'event_category': 'SevgiCevap',
+      'event_label': 'Hayır',
+      'value': 0
+    });
+
+    // Mevcut büyütme işlemi
     let evetBtn = document.getElementById("evet");
-    let hayirBtn = document.getElementById("hayır");
-    let fontSize = 18;
+    let currentFontSize = parseInt(window.getComputedStyle(evetBtn).fontSize);
+    evetBtn.style.fontSize = (currentFontSize + 3) + "px";
+    evetBtn.style.padding = (15 + (currentFontSize + 3 - 18)) + "px " + (30 + (currentFontSize + 3 - 18)) + "px";
+  }
+</script>
 
-    function tesekkur() {
-      document.getElementById("soruAlani").style.display = "none";
-      document.getElementById("tesekkurAlani").style.display = "block";
-    }
-
-    function kac() {
-      fontSize += 3;
-      evetBtn.style.fontSize = fontSize + "px";
-      evetBtn.style.padding = (15 + (fontSize - 18)) + "px " + (30 + (fontSize - 18)) + "px";
-
-
-    }
-  </script>
 </body>
 
 </html>
