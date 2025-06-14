@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seni Seviyorum❤️</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZN79LLBV2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-NZN79LLBV2');
+  </script>
+
+  <link rel="icon" href="AnaIcon.png" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container,
+    .tesekkur {
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .tesekkur {
+      display: none;
+      color: #d63384;
+      font-size: 22px;
+      animation: fadein 1s ease-in-out;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    h2 {
+      color: #d63384;
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    #evet,
+    #hayır {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-width: 120px;
+    }
+
+    #evet {
+      background-color: #ff69b4;
+      color: white;
+      z-index: 1;
+    }
+
+    #hayır {
+      background-color: #8b0000;
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 480px) {
+      .buttons {
+        flex-direction: column;
+      }
+
+      #evet,
+      #hayır {
+        font-size: 16px;
+        min-width: 100px;
+        padding: 12px 24px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .tesekkur {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="soruAlani">
+    <h2>Beni Seviyor Musun? 💖</h2>
+    <div class="buttons">
+      <button id="evet" onclick="tesekkur()">Evet</button>
+      <button id="hayır" onclick="kac()">Hayır</button>
+    </div>
+  </div>
+
+  <div class="tesekkur" id="tesekkurAlani">
+    ❤️ Teşekkür ederim! <br />
+    İyi ki varsın, seni çok seviyorum! 💕
+  </div>
+
+  <script>
+    let evetBtn = document.getElementById("evet");
+    let hayirBtn = document.getElementById("hayır");
+    let fontSize = 18;
+
+    function tesekkur() {
+      document.getElementById("soruAlani").style.display = "none";
+      document.getElementById("tesekkurAlani").style.display = "block";
+    }
+
+    function kac() {
+      fontSize += 3;
+      evetBtn.style.fontSize = fontSize + "px";
+      evetBtn.style.padding = (15 + (fontSize - 18)) + "px " + (30 + (fontSize - 18)) + "px";
+
+
+    }
+  </script>
+</body>
+
+</html>
