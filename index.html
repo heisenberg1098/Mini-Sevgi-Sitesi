@@ -2,170 +2,180 @@
 <html lang="tr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seni Seviyorum❤️</title>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZN79LLBV2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seni Seviyorum❤️</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZN79LLBV2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'G-NZN79LLBV2');
-  </script>
+        gtag('config', 'G-NZN79LLBV2');
+    </script>
 
-  <link rel="icon" href="AnaIcon.png" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      user-select: none;
-    }
+    <link rel="icon" href="AnaIcon.png" />
+    <style>
+        @font-face {
+            font-family: 'RomanticFont';
+            src: url('~/GuzelFont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    body {
-      background-color: #fff0f5;
-      font-family: 'Segoe UI', sans-serif;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      text-align: center;
-    }
+        * {
+            font-family: 'RomanticFont', cursive;
+            font-size: 1.2rem;
+            color: #d23669;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
 
-    .container,
-    .tesekkur {
-      max-width: 500px;
-      width: 100%;
-    }
+        body {
+            background-color: #fff0f5;
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .tesekkur {
-      display: none;
-      color: #d63384;
-      font-size: 22px;
-      animation: fadein 1s ease-in-out;
-    }
+        .container,
+        .tesekkur {
+            max-width: 500px;
+            width: 100%;
+        }
 
-    @keyframes fadein {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
+        .tesekkur {
+            display: none;
+            color: #d63384;
+            font-size: 22px;
+            animation: fadein 1s ease-in-out;
+        }
 
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
 
-    h2 {
-      color: #d63384;
-      margin-bottom: 40px;
-      font-size: 24px;
-    }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      position: relative;
-      flex-wrap: wrap;
-    }
+        h2 {
+            color: #d63384;
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
 
-    #evet,
-    #hayır {
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      min-width: 120px;
-    }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            flex-wrap: wrap;
+        }
 
-    #evet {
-      background-color: #ff69b4;
-      color: white;
-      z-index: 1;
-    }
+        #evet,
+        #hayır {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-width: 120px;
+        }
 
-    #hayır {
-      background-color: #8b0000;
-      color: white;
-      position: relative;
-      z-index: 1;
-    }
+        #evet {
+            background-color: #ff69b4;
+            color: white;
+            z-index: 1;
+        }
 
-    @media (max-width: 480px) {
-      .buttons {
-        flex-direction: column;
-      }
+        #hayır {
+            background-color: #8b0000;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
 
-      #evet,
-      #hayır {
-        font-size: 16px;
-        min-width: 100px;
-        padding: 12px 24px;
-      }
+        @media (max-width: 480px) {
+            .buttons {
+                flex-direction: column;
+            }
 
-      h2 {
-        font-size: 20px;
-      }
+            #evet,
+            #hayır {
+                font-size: 16px;
+                min-width: 100px;
+                padding: 12px 24px;
+            }
 
-      .tesekkur {
-        font-size: 18px;
-      }
-    }
-  </style>
+            h2 {
+                font-size: 20px;
+            }
+
+            .tesekkur {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 
 
 <body>
-  <div class="container" id="soruAlani">
-    <h2>Beni Seviyor Musun? 💖</h2>
-    <div class="buttons">
-<button id="evet" onclick="tesekkur()">Evet</button>
-<button id="hayır" onclick="kac()">Hayır</button>
+    <div class="container" id="soruAlani">
+        <h2>Beni Affeder Misin? 💖</h2>
+        <div class="buttons">
+            <button id="evet" onclick="tesekkur()">Affederim</button>
+            <button id="hayır" onclick="kac()">Affetmem</button>
+        </div>
     </div>
-  </div>
 
-  <div class="tesekkur" id="tesekkurAlani">
-    ❤️ Teşekkür ederim! <br />
-    İyi ki varsın, seni çok seviyorum! 💕
-  </div>
+    <div class="tesekkur" id="tesekkurAlani">
+        ❤️ Teşekkür ederim! <br />
+        İyi ki varsın, seni çok seviyorum! 💕
+    </div>
 
- 
 
-<script>
-  function tesekkur() {
-    // Evet tıklaması event'i gönder
-    gtag('event', 'buton_tiklama', {
-      'event_category': 'SevgiCevap',
-      'event_label': 'Evet',
-      'value': 1
-    });
 
-    document.getElementById("soruAlani").style.display = "none";
-    document.getElementById("tesekkurAlani").style.display = "block";
-  }
+    <script>
+        function tesekkur() {
+            // Evet tıklaması event'i gönder
+            gtag('event', 'buton_tiklama', {
+                'event_category': 'SevgiCevap',
+                'event_label': 'Evet',
+                'value': 1
+            });
 
-  function kac() {
-    // Hayır tıklaması event'i gönder
-    gtag('event', 'buton_tiklama', {
-      'event_category': 'SevgiCevap',
-      'event_label': 'Hayır',
-      'value': 0
-    });
+            document.getElementById("soruAlani").style.display = "none";
+            document.getElementById("tesekkurAlani").style.display = "block";
+        }
 
-    // Mevcut büyütme işlemi
-    let evetBtn = document.getElementById("evet");
-    let currentFontSize = parseInt(window.getComputedStyle(evetBtn).fontSize);
-    evetBtn.style.fontSize = (currentFontSize + 3) + "px";
-    evetBtn.style.padding = (15 + (currentFontSize + 3 - 18)) + "px " + (30 + (currentFontSize + 3 - 18)) + "px";
-  }
-</script>
+        function kac() {
+            // Hayır tıklaması event'i gönder
+            gtag('event', 'buton_tiklama', {
+                'event_category': 'SevgiCevap',
+                'event_label': 'Hayır',
+                'value': 0
+            });
+
+            // Mevcut büyütme işlemi
+            let evetBtn = document.getElementById("evet");
+            let currentFontSize = parseInt(window.getComputedStyle(evetBtn).fontSize);
+            evetBtn.style.fontSize = (currentFontSize + 3) + "px";
+            evetBtn.style.padding = (15 + (currentFontSize + 3 - 18)) + "px " + (30 + (currentFontSize + 3 - 18)) + "px";
+        }
+    </script>
 
 </body>
 
